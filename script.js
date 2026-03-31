@@ -1,120 +1,183 @@
 /* ============================================
-   Portfolio — Interactive Scripts
+   INTERACTIVE DATA CANVAS — JS Interactions
+   GSAP, ScrollTrigger, Magnetic Buttons, Scatter Plot
    ============================================ */
 
-(function () {
-    'use strict';
+// Wait for GSAP to load
+window.addEventListener('load', () => {
+    gsap.registerPlugin(ScrollTrigger);
 
-    // ──── Scroll Progress ────
-    const progressBar = document.getElementById('scrollProgress');
-    const navbar = document.getElementById('navbar');
-
-    function updateScroll() {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        progressBar.style.width = pct + '%';
-
-        // Navbar background
-        navbar.classList.toggle('scrolled', scrollTop > 60);
-    }
-    window.addEventListener('scroll', updateScroll, { passive: true });
-    updateScroll();
-
-    // ──── Mobile Nav Toggle ────
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    const navOverlay = document.getElementById('navOverlay');
-
-    function openNav() {
-        navToggle.classList.add('active');
-        navLinks.classList.add('open');
-        navOverlay.classList.add('active');
-    }
-
-    function closeNav() {
-        navToggle.classList.remove('active');
-        navLinks.classList.remove('open');
-        navOverlay.classList.remove('active');
-    }
-
-    navToggle.addEventListener('click', () => {
-        if (navLinks.classList.contains('open')) {
-            closeNav();
-        } else {
-            openNav();
-        }
+    // ═════ SLIDER ARROW BUTTONS ═════
+    document.querySelectorAll('.slider-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const visual = btn.closest('.project-visual');
+            const slider = visual.querySelector('.project-slider');
+            const slideWidth = slider.querySelector('.slide').offsetWidth;
+            const direction = btn.classList.contains('next') ? 1 : -1;
+            slider.scrollBy({ left: direction * slideWidth, behavior: 'smooth' });
+        });
     });
 
-    // Close nav on link click
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => closeNav());
-    });
+    document.querySelectorAll('.magnetic, .magnetic-hover').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const h = rect.width / 2;
+            
+            const x = e.clientX - rect.left - h;
+            const y = e.clientY - rect.top - (rect.height / 2);
 
-    // Close nav when clicking the backdrop overlay
-    navOverlay.addEventListener('click', () => closeNav());
-
-    // ──── Scroll Reveal ────
-    const reveals = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry, i) => {
-                if (entry.isIntersecting) {
-                    // Stagger siblings
-                    const delay = i * 100;
-                    setTimeout(() => entry.target.classList.add('visible'), delay);
-                    revealObserver.unobserve(entry.target);
-                }
+            gsap.to(btn, {
+                x: x * 0.4,
+                y: y * 0.4,
+                duration: 0.4,
+                ease: "power2.out"
             });
-        },
-        { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+        });
+
+        btn.addEventListener('mouseleave', () => {
+            gsap.to(btn, {
+                x: 0,
+                y: 0,
+                duration: 0.7,
+                ease: "elastic.out(1, 0.3)"
+            });
+        });
+    });
+
+    // ═════ HERO ANIMATIONS ═════
+    const heroTl = gsap.timeline();
+    
+    // Fade up elements
+    heroTl.fromTo('.fade-up', 
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: "power3.out" }
     );
-    reveals.forEach(el => revealObserver.observe(el));
 
-    // ──── Typing Effect (Hero Subtitle) ────
-    const heroTitle = document.getElementById('heroTitle');
-    const roles = [
-        'Application Support Analyst',
-        'Microsoft Dynamics 365',
-        'Power BI Developer',
-        'SQL & Data Analytics'
-    ];
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function type() {
-        const current = roles[roleIndex];
-        if (isDeleting) {
-            heroTitle.textContent = current.substring(0, charIndex--);
-            if (charIndex < 0) {
-                isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-                setTimeout(type, 400);
-                return;
+    // ═════ TYPEWRITER EFFECT ═════
+    const titleText = "I transform complex enterprise data into strategic business value through advanced analytics, Power BI, and Dynamics 365.";
+    const titleEl = document.getElementById('heroTitle');
+    if(titleEl) {
+        let i = 0;
+        function typeWriter() {
+            if (i < titleText.length) {
+                titleEl.innerHTML += titleText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 35);
+            } else {
+                // Add blinking cursor
+                titleEl.innerHTML += '<span class="type-cursor" style="animation: blink 1s infinite;">|</span>';
             }
-            setTimeout(type, 35);
-        } else {
-            heroTitle.textContent = current.substring(0, charIndex++);
-            if (charIndex > current.length) {
-                isDeleting = true;
-                setTimeout(type, 1800);
-                return;
-            }
-            setTimeout(type, 70);
         }
+        setTimeout(typeWriter, 1200); // Start after fade up
     }
-    setTimeout(type, 1200);
 
-    // ──── Smooth Scroll for anchor links ────
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Number Counters
+    document.querySelectorAll('.counter').forEach(counter => {
+        const target = parseInt(counter.dataset.val);
+        gsap.to(counter, {
+            innerHTML: target,
+            duration: 2,
+            snap: { innerHTML: 1 },
+            ease: "power2.out",
+            delay: 0.5
+        });
+    });
+
+    // ═════ SCROLL REVEAL (GSAP staggers) ═════
+    const revealElements = document.querySelectorAll('.gs-reveal');
+    revealElements.forEach(el => {
+        let direction = 1;
+        let x = 0, y = 40;
+        
+        if (el.classList.contains('right')) { x = 40; y = 0; }
+        else if (el.classList.contains('left')) { x = -40; y = 0; }
+        else if (el.classList.contains('up')) { x = 0; y = 60; }
+
+        gsap.fromTo(el, 
+            { x: x, y: y, opacity: 0 },
+            {
+                x: 0, y: 0, opacity: 1,
+                duration: 1.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+    });
+
+    // ═════ SCATTER PLOT SIMULATION ═════
+    const scatterContainer = document.getElementById('scatterDots');
+    if (scatterContainer) {
+        // Generate random dots biased towards top right (high impact, high complexity)
+        for(let i=0; i<35; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            
+            // Bias logic
+            const isHighPerformant = Math.random() > 0.4;
+            const xPct = isHighPerformant ? (Math.random() * 50 + 40) : (Math.random() * 80 + 10);
+            const yPct = isHighPerformant ? (Math.random() * 50 + 40) : (Math.random() * 80 + 10);
+            
+            dot.style.left = `${xPct}%`;
+            dot.style.bottom = `${yPct}%`;
+            
+            scatterContainer.appendChild(dot);
+        }
+
+        // Animate dots expanding outwards on scroll
+        gsap.fromTo('.dot', 
+            { scale: 0, opacity: 0, xPercent: -50, yPercent: 50 },
+            {
+                scale: 1, opacity: 1, 
+                stagger: 0.05,
+                duration: 0.8,
+                ease: "back.out(1.7)",
+                scrollTrigger: {
+                    trigger: ".scatter-container",
+                    start: "top 70%"
+                }
+            }
+        );
+
+        // Trendline animation
+        ScrollTrigger.create({
+            trigger: ".scatter-container",
+            start: "top 60%",
+            onEnter: () => document.querySelector('.trend-line').classList.add('active')
+        });
+    }
+
+    // ═════ GAUGE ANIMATIONS ═════
+    document.querySelectorAll('.gauge').forEach(gauge => {
+        const val = gauge.style.getPropertyValue('--val');
+        gauge.style.setProperty('--val-current', '0%');
+        
+        ScrollTrigger.create({
+            trigger: gauge,
+            start: "top 80%",
+            onEnter: () => {
+                gauge.style.setProperty('--val-current', val);
             }
         });
     });
 
-})();
+    // ═════ CSS CHART ANIMATION ═════
+    const charts = document.querySelectorAll('.css-chart');
+    charts.forEach(chart => {
+        ScrollTrigger.create({
+            trigger: chart,
+            start: "top 75%",
+            onEnter: () => chart.classList.add('active')
+        });
+    });
+
+    // ═════ NAV SCROLL ═════
+    const nav = document.querySelector('.glass-nav');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 50) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+    });
+});

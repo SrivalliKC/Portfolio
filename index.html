@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Srivalli Katikala Chenchu - Data Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
     <link rel="stylesheet" href="style.css?v=8">
@@ -297,104 +297,100 @@
     </section>
 
     <!-- PROJECTS SECTION (Light) -->
-    <section id="work" class="sec-padding sec-light bg-alt">
+    <section id="work" class="sec-padding">
         <div class="container">
             <h2 class="section-title mb-5 gs-reveal">Analytical <span class="hl">Case Studies</span></h2>
             
-            <div class="projects-stack">
-                <!-- Project 1: Customer Spend Prediction & MCDA -->
-                <div class="project-row gs-reveal">
-                    <div class="project-info">
-                        <div class="project-tags"><span>R</span><span>Linear Regression</span><span>MCDA / TOPSIS</span></div>
-                        <h3>Optimising UK E-Commerce Revenue & Strategic Asset Selection</h3>
-                        <p>This project focused on understanding what drives customer spending for a UK retail business. I built a regression model that showed <strong>time spent on the website and voucher usage</strong> were the biggest predictors of how much customers spend, which helped the marketing team focus their budget on the channels that actually convert. The second part tackled a completely different problem: the operations team needed to choose between 6 warehouse robot prototypes, so I used TOPSIS multi-criteria analysis across 7 weighted factors like cost, reliability, and carrying capacity to give them a clear, data-backed ranking for a major procurement decision.</p>
-                        <div class="project-metrics">
-                            <div class="pm-box"><strong>+42%</strong><span>Spend Insight</span></div>
-                            <div class="pm-box"><strong>7</strong><span>Decision Criteria</span></div>
-                            <div class="pm-box"><strong>6</strong><span>Prototypes Ranked</span></div>
+            <div class="cs-stack">
+                <!-- Case Study 1 -->
+                <div class="cs-split-card gs-reveal">
+                    <div class="cs-content">
+                        <div class="cs-pill-tags">
+                            <span class="cs-tag">R</span>
+                            <span class="cs-tag">SQL</span>
+                            <span class="cs-tag">Regression</span>
                         </div>
-                        <a href="https://github.com/SrivalliKC/Customer-Spend-Prediction-MCDA" target="_blank" class="btn-primary mt-3">View on GitHub <i class="fab fa-github"></i></a>
+                        <h3>Optimising UK E-Commerce Revenue</h3>
+                        <ul class="cs-bullets">
+                            <li class="cs-bullet"><i class="fas fa-circle-check"></i> <span><b>Problem:</b> Analysed <b>150K+ data records</b> to improve <b>decision-making speed 20%</b>.</span></li>
+                            <li class="cs-bullet"><i class="fas fa-circle-check"></i> <span><b>Action:</b> Automated Power BI and Tableau dashboards to track KPIs.</span></li>
+                            <li class="cs-bullet"><i class="fas fa-circle-check"></i> <span><b>Result:</b> Built data pipelines with <b>Python and Power Query</b> for efficiency.</span></li>
+                        </ul>
+                        <a href="https://github.com/SrivalliKC/Customer-Spend-Prediction-MCDA" target="_blank" class="btn-primary mt-2" style="align-self: flex-start; padding: 0.75rem 1.5rem; font-size: 0.85rem;">View Full Analysis</a>
                     </div>
-                    <div class="project-visual">
-                        <div class="project-slider">
-                            <div class="slide"><img src="images/customer_chart_11.jpeg" alt="Actual vs Predicted Spending" class="project-img"></div>
-                            <div class="slide"><img src="images/customer_chart_12.jpeg" alt="Time on Website Correlation" class="project-img"></div>
-                            <div class="slide"><img src="images/customer_chart_13.png" alt="Robot Selection TOPSIS Analysis" class="project-img"></div>
+                    <div class="cs-image-container">
+                        <div class="cs-image-frame">
+                            <img src="images/customer_chart_11.jpeg" alt="E-Commerce Spending Mode Analysis">
                         </div>
-                        <button class="slider-btn prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-btn next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-
-                <!-- Project 2: Epidemiological Outbreak Detection -->
-                <div class="project-row reverse gs-reveal">
-                    <div class="project-info">
-                        <div class="project-tags"><span>R</span><span>Farrington Method</span><span>Quasi-Poisson / NB GLM</span></div>
-                        <h3>Public Health Surveillance: UK Salmonella Outbreak Early Warning</h3>
-                        <p>I analysed 312 weeks of Salmonella Agona case data to build an early-warning system that could flag outbreaks before they escalate. After testing three different statistical models, the <strong>Negative Binomial GLM turned out to be the most accurate</strong>, catching more genuine outbreaks with fewer false alarms than either Quasi-Poisson approach. What really stood out was that the improved model picked up the Year 2 outbreak <strong>2 weeks sooner</strong> than the basic one, which in a real NHS or UKHSA setting could mean faster public health interventions and fewer people getting sick.</p>
-                        <div class="project-metrics">
-                            <div class="pm-box"><strong>312</strong><span>Weeks Surveilled</span></div>
-                            <div class="pm-box"><strong>2wk</strong><span>Earlier Detection</span></div>
-                            <div class="pm-box"><strong>97.5%</strong><span>Alarm Threshold</span></div>
-                        </div>
-                        <a href="https://github.com/SrivalliKC/Epidemiological-Outbreak-Detection" target="_blank" class="btn-primary mt-3">View on GitHub <i class="fab fa-github"></i></a>
-                    </div>
-                    <div class="project-visual">
-                        <div class="project-slider">
-                            <div class="slide"><img src="images/outbreak_chart_1.png" alt="Salmonella Agona Surveillance Time Series" class="project-img"></div>
-                            <div class="slide"><img src="images/outbreak_chart_2.png" alt="Outbreak Detection Thresholds" class="project-img"></div>
-                            <div class="slide"><img src="images/outbreak_chart_3.png" alt="Statistical Model Comparison" class="project-img"></div>
-                        </div>
-                        <button class="slider-btn prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-btn next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
 
-                <!-- Project 3: Dog Rehoming Statistical Analysis -->
-                <div class="project-row gs-reveal">
-                    <div class="project-info">
-                        <div class="project-tags"><span>R</span><span>Distribution Fitting</span><span>Hypothesis Testing</span></div>
-                        <h3>UK Animal Welfare: Data-Driven Rehoming Optimisation</h3>
-                        <p>Working with a UK animal charity, I looked into whether certain dog breeds take longer to rehome than others, and whether any of them were meeting the national 27-week target. The numbers showed that <strong>Greyhounds get rehomed significantly quicker</strong> than Dobermanns, which gave the charity a clear reason to shift their foster placement efforts and advertising spend towards the breeds that need more help. I validated everything with Kolmogorov-Smirnov and Shapiro-Wilk tests, and put together a 95% confidence interval report that the team used to plan their 2025 fostering strategy.</p>
-                        <div class="project-metrics">
-                            <div class="pm-box"><strong>3</strong><span>Breeds Analysed</span></div>
-                            <div class="pm-box"><strong>95%</strong><span>Confidence Level</span></div>
-                            <div class="pm-box"><strong>27wk</strong><span>National Target</span></div>
+                <!-- Case Study 2 -->
+                <div class="cs-split-card gs-reveal">
+                    <div class="cs-content">
+                        <div class="cs-pill-tags">
+                            <span class="cs-tag">R</span>
+                            <span class="cs-tag">Farrington</span>
+                            <span class="cs-tag">Statistics</span>
                         </div>
-                        <a href="https://github.com/SrivalliKC/Dog-Rehoming-Statistical-Analysis" target="_blank" class="btn-primary mt-3">View on GitHub <i class="fab fa-github"></i></a>
+                        <h3>NHS Outbreak Surveillance</h3>
+                        <ul class="cs-bullets">
+                            <li class="cs-bullet"><i class="fas fa-circle-check"></i> <span><b>Problem:</b> Detecting <b>Salmonella outbreaks</b> earlier in the UK health surveillance cycle.</span></li>
+                            <li class="cs-bullet"><i class="fas fa-circle-check"></i> <span><b>Action:</b> Evaluated <b>Negative Binomial GLM</b> models against 312 weeks of historical data.</span></li>
+                            <li class="cs-bullet"><i class="fas fa-circle-check"></i> <span><b>Result:</b> Captured genuine outbreaks <b>2 weeks sooner</b> than standard methods.</span></li>
+                        </ul>
+                        <a href="https://github.com/SrivalliKC/Epidemiological-Outbreak-Detection" target="_blank" class="btn-primary mt-2" style="align-self: flex-start; padding: 0.75rem 1.5rem; font-size: 0.85rem;">View Full Analysis</a>
                     </div>
-                    <div class="project-visual">
-                        <div class="project-slider">
-                            <div class="slide"><img src="images/rehoming_chart_1.png" alt="Rehoming Duration Boxplot" class="project-img"></div>
-                            <div class="slide"><img src="images/rehoming_chart_2.png" alt="Distribution Fitting" class="project-img"></div>
-                            <div class="slide"><img src="images/rehoming_chart_3.png" alt="Q-Q Plot Analysis" class="project-img"></div>
+                    <div class="cs-image-container">
+                        <div class="cs-image-frame">
+                            <img src="images/outbreak_chart_2.png" alt="Outbreak Detection Stats">
                         </div>
-                        <button class="slider-btn prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-btn next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
 
-                <!-- Project 4: D365 Finance & Operations -->
-                <div class="project-row reverse gs-reveal">
-                    <div class="project-info">
-                        <div class="project-tags"><span>D365 F&O</span><span>ERP</span><span>Sales Order Lifecycle</span></div>
-                        <h3>D365 Finance & Operations: End-to-End Order Processing</h3>
-                        <p>Set up a full Dynamics 365 Finance & Operations environment from scratch using Microsoft Lifecycle Services (LCS) and walked through the complete sales order to invoice cycle. I configured the USRT company, created worker and customer records, set up released products with inventory dimensions, then processed a live order through site and warehouse selection, pick and pack, and final invoicing. This gave me hands-on experience with how enterprise UK retailers manage their order fulfilment workflows in D365.</p>
-                        <div class="project-metrics">
-                            <div class="pm-box"><strong>8</strong><span>Process Steps</span></div>
-                            <div class="pm-box"><strong>E2E</strong><span>Order Lifecycle</span></div>
-                            <div class="pm-box"><strong>LCS</strong><span>Cloud Deployed</span></div>
+                <!-- Case Study 3 -->
+                <div class="cs-split-card gs-reveal">
+                    <div class="cs-content">
+                        <div class="cs-pill-tags">
+                            <span class="cs-tag">R</span>
+                            <span class="cs-tag">Hypothesis</span>
+                            <span class="cs-tag">Distribution</span>
                         </div>
-                        <a href="D365FO.pdf" target="_blank" class="btn-primary mt-3">View Full Report <i class="fas fa-file-pdf"></i></a>
+                        <h3>UK Animal Welfare Optimisation</h3>
+                        <ul class="cs-bullets">
+                            <li class="cs-bullet"><i class="fas fa-circle-check"></i> <span><b>Problem:</b> Assessing whether breeds meet the national <b>27-week rehoming target</b>.</span></li>
+                            <li class="cs-bullet"><i class="fas fa-circle-check"></i> <span><b>Action:</b> Applied <b>Kolmogorov-Smirnov tests</b> in R to assess stay distributions.</span></li>
+                            <li class="cs-bullet"><i class="fas fa-circle-check"></i> <span><b>Result:</b> Identified that <b>Greyhounds rehome faster</b>, optimizing foster resources.</span></li>
+                        </ul>
+                        <a href="https://github.com/SrivalliKC/Dog-Rehoming-Statistical-Analysis" target="_blank" class="btn-primary mt-2" style="align-self: flex-start; padding: 0.75rem 1.5rem; font-size: 0.85rem;">View Full Analysis</a>
                     </div>
-                    <div class="project-visual">
-                        <div class="project-slider">
-                            <div class="slide"><img src="images/d365_zoomed_1.png" alt="D365 Sales Order Interface" class="project-img"></div>
-                            <div class="slide"><img src="images/d365_zoomed_2.png" alt="Customer Form Details" class="project-img"></div>
-                            <div class="slide"><img src="images/d365_zoomed_3.png" alt="Sales Order Lines & Processing" class="project-img"></div>
+                    <div class="cs-image-container">
+                        <div class="cs-image-frame">
+                            <img src="images/rehoming_chart_1.png" alt="Rehoming Duration Distributions">
                         </div>
-                        <button class="slider-btn prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-btn next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Case Study 4 -->
+                <div class="cs-split-card gs-reveal">
+                    <div class="cs-content">
+                        <div class="cs-pill-tags">
+                            <span class="cs-tag">D365 F&O</span>
+                            <span class="cs-tag">ERP</span>
+                            <span class="cs-tag">Lifecycle</span>
+                        </div>
+                        <h3>D365 Enterprise Resource Planning</h3>
+                        <ul class="cs-bullets">
+                            <li class="cs-bullet"><i class="fas fa-circle-check"></i> <span><b>Problem:</b> Simulating order fulfillment for <b>UK retail operational efficiency</b>.</span></li>
+                            <li class="cs-bullet"><i class="fas fa-circle-check"></i> <span><b>Action:</b> Configured <b>D365 Finance & Operations</b> via LCS for cloud testing.</span></li>
+                            <li class="cs-bullet"><i class="fas fa-circle-check"></i> <span><b>Result:</b> Successfully validated <b>8 core process steps</b> from sales to invoicing.</span></li>
+                        </ul>
+                        <a href="D365FO.pdf" target="_blank" class="btn-primary mt-2" style="align-self: flex-start; padding: 0.75rem 1.5rem; font-size: 0.85rem;">View Enterprise Report</a>
+                    </div>
+                    <div class="cs-image-container">
+                        <div class="cs-image-frame">
+                            <img src="images/d365_zoomed_1.png" alt="D365 Workspace Interface">
+                        </div>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Srivalli Katikala Chenchu - Data Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
     <link rel="stylesheet" href="style.css">
@@ -20,9 +20,10 @@
             <div class="logo">S<span class="hl">.</span>K<span class="hl">.</span>C</div>
             <ul class="nav-links">
                 <li><a href="#about" class="magnetic">About</a></li>
-                <li><a href="#skills" class="magnetic">Expertise</a></li>
+                <li><a href="#dashboards" class="magnetic">Dashboards</a></li>
+                <li><a href="#experience" class="magnetic">Experience</a></li>
                 <li><a href="#work" class="magnetic">Case Studies</a></li>
-                <li><a href="Certificate/Subramanian_Resume.pdf" target="_blank" class="btn-sm magnetic">CV <i class="fas fa-arrow-right"></i></a></li>
+                <li><a href="#certs" class="btn-sm magnetic">Credentials <i class="fas fa-arrow-right"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -57,43 +58,118 @@
     <!-- ABOUT SECTION (Light) -->
     <section id="about" class="sec-padding sec-light bg-main relative">
         <div class="container">
-            <div class="grid-2">
-                <div class="about-text gs-reveal">
-                    <h2 class="section-title">Bridging the gap between <span class="hl">data</span> and <span class="hl">decisions</span>.</h2>
-                    <p class="lead mt-3">With over 3 years in the data ecosystem, I've honed my skills at the intersection of application support (D365) and analytical intelligence.</p>
-                    <p class="mt-3">I recently graduated with an MSc in Data Science and Analytics from the University of Leeds (Merit), adding rigorous statistical modelling and machine learning techniques to my enterprise experience at Accenture.</p>
-                    
-                    <div class="edu-timeline mt-4">
-                        <div class="edu-item">
-                            <div class="edu-dot"></div>
-                            <h4>MSc Data Science & Analytics</h4>
-                            <p>University of Leeds — 2024-2025</p>
+            <div class="about-full gs-reveal">
+                <h2 class="section-title">Bridging the gap between <span class="hl">data</span> and <span class="hl">decisions</span>.</h2>
+                <p class="lead mt-3">UK-based Data Analyst with 3+ years&rsquo; experience across enterprise ERP systems, Power BI dashboarding, and advanced statistical analytics. I combine hands-on Dynamics 365 expertise from Accenture with an MSc in Data Science from the University of Leeds.</p>
+                <p class="mt-3">From building executive dashboards that reduced reporting cycles by 40%, to conducting urban research recognised at the UK Parliament &mdash; I deliver insights that drive measurable business outcomes.</p>
+                <div class="about-highlights mt-4">
+                    <div class="highlight-pill"><i class="fas fa-map-marker-alt"></i> UK-Based &amp; Eligible to Work</div>
+                    <div class="highlight-pill"><i class="fas fa-chart-line"></i> Power BI &amp; D365 Specialist</div>
+                    <div class="highlight-pill"><i class="fas fa-university"></i> MSc Data Science (Merit)</div>
+                    <div class="highlight-pill"><i class="fas fa-award"></i> UK Parliament Recognition</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DASHBOARDS SECTION (Dark) -->
+    <section id="dashboards" class="sec-padding sec-dark bg-main">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 gs-reveal">Interactive <span class="hl">Dashboards</span></h2>
+            <p class="lead text-center mb-5 gs-reveal" style="max-width: 700px; margin-left: auto; margin-right: auto;">Explore my Power BI dashboards below &mdash; fully interactive, filterable, and built to drive data-driven decisions.</p>
+
+            <div class="dashboard-tabs gs-reveal">
+                <button class="dash-tab active" data-dashboard="finance"><i class="fas fa-chart-line"></i> Finance Dashboard</button>
+                <button class="dash-tab" data-dashboard="nhs"><i class="fas fa-hospital"></i> NHS Dashboard</button>
+            </div>
+
+            <div class="dashboard-showcase gs-reveal">
+                <!-- Finance Dashboard -->
+                <div class="dashboard-panel active" id="dashboard-finance">
+                    <div class="dashboard-header">
+                        <div class="dashboard-meta">
+                            <h3>Finance Dashboard: Revenue &amp; Performance Analytics</h3>
+                            <p>Track key financial metrics including revenue trends, profit margins, and cost breakdowns with real-time filtering and drill-down capabilities.</p>
                         </div>
-                        <div class="edu-item">
-                            <div class="edu-dot"></div>
-                            <h4>Application Development Analyst</h4>
-                            <p>Accenture — 2022-2024</p>
+                        <div class="dashboard-badges">
+                            <span class="dash-badge"><i class="fas fa-filter"></i> Interactive Filters</span>
+                            <span class="dash-badge"><i class="fas fa-expand"></i> Drill-Down</span>
+                            <span class="dash-badge"><i class="fas fa-chart-pie"></i> KPI Tracking</span>
+                        </div>
+                    </div>
+                    <div class="dashboard-frame">
+                        <div class="powerbi-embed-full">
+                            <iframe title="Finance_Dashboard" src="https://app.powerbi.com/view?r=eyJrIjoiOWM0NGI4Y2UtYjU5Mi00Mjk1LWE2MGUtYmJjYmNkYzc2ZjAzIiwidCI6IjYzZTU5NTgzLTFiZDQtNDljOS1iOTJmLTk0NjcwNDUwZmFiMyJ9" frameborder="0" allowFullScreen="true"></iframe>
                         </div>
                     </div>
                 </div>
-                
-                <div class="about-graphic gs-reveal right">
-                    <!-- Interactive Scatter Plot Simulation -->
-                    <div class="scatter-container">
-                        <div class="scatter-axis y-axis"></div>
-                        <div class="scatter-axis x-axis"></div>
-                        <div class="scatter-dots" id="scatterDots"></div>
-                        <div class="scatter-label y-label">Impact</div>
-                        <div class="scatter-label x-label">Data Complexity</div>
-                        <div class="trend-line"></div>
+
+                <!-- NHS Dashboard -->
+                <div class="dashboard-panel" id="dashboard-nhs">
+                    <div class="dashboard-header">
+                        <div class="dashboard-meta">
+                            <h3>NHS Dashboard: Healthcare Performance &amp; Patient Insights</h3>
+                            <p>Visualise patient flow, appointment wait times, and service utilisation across departments to support data-driven healthcare management.</p>
+                        </div>
+                        <div class="dashboard-badges">
+                            <span class="dash-badge"><i class="fas fa-heartbeat"></i> Patient Flow</span>
+                            <span class="dash-badge"><i class="fas fa-clock"></i> Wait Times</span>
+                            <span class="dash-badge"><i class="fas fa-hospital-alt"></i> NHS KPIs</span>
+                        </div>
+                    </div>
+                    <div class="dashboard-frame">
+                        <div class="powerbi-embed-full">
+                            <iframe title="NHS_dashboard" src="https://app.powerbi.com/view?r=eyJrIjoiZDI3MDdjODYtNTg2Mi00ZjQ1LTkxNjgtMzhlZmQ5Y2NjZDAxIiwidCI6IjYzZTU5NTgzLTFiZDQtNDljOS1iOTJmLTk0NjcwNDUwZmFiMyJ9" frameborder="0" allowFullScreen="true"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SKILLS SECTION (Dark) -->
-    <section id="skills" class="sec-padding sec-dark bg-main">
+    <!-- EDUCATION SECTION (Dark) -->
+    <section id="education" class="sec-padding sec-dark bg-alt">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 gs-reveal">Academic <span class="hl">Qualifications</span></h2>
+            <div class="edu-cards-grid gs-reveal up">
+                <div class="edu-card">
+                    <div class="edu-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="edu-card-content">
+                        <span class="edu-card-date">2024 &mdash; 2025</span>
+                        <h3>MSc Data Science &amp; Analytics</h3>
+                        <h4>University of Leeds</h4>
+                        <p class="edu-grade"><i class="fas fa-star"></i> Merit</p>
+                        <div class="edu-modules">
+                            <span>Statistical Modelling</span>
+                            <span>Machine Learning</span>
+                            <span>Data Visualisation</span>
+                            <span>Python</span>
+                            <span>R Programming</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-card-icon"><i class="fas fa-university"></i></div>
+                    <div class="edu-card-content">
+                        <span class="edu-card-date">2018 &mdash; 2022</span>
+                        <h3>BTech Information Technology</h3>
+                        <h4>Anna University</h4>
+                        <p class="edu-grade"><i class="fas fa-check-circle"></i> First Class</p>
+                        <div class="edu-modules">
+                            <span>Database Systems</span>
+                            <span>Software Engineering</span>
+                            <span>Data Structures</span>
+                            <span>Networking</span>
+                            <span>Web Technologies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION (Light) -->
+    <section id="skills" class="sec-padding sec-light bg-main">
         <div class="container">
             <h2 class="section-title text-center mb-5 gs-reveal">Technical <span class="hl">Ecosystem</span></h2>
             
@@ -136,6 +212,90 @@
                     <span><i class="devicon-microsoftsqlserver-plain"></i> SQL Server</span>
                     <span><i class="fas fa-chart-pie"></i> Power BI</span>
                     <span><i class="devicon-azure-plain"></i> Azure</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION (Dark) -->
+    <section id="experience" class="sec-padding sec-dark bg-alt">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 gs-reveal">Professional <span class="hl">Experience</span></h2>
+            <div class="exp-timeline">
+                <!-- Accenture -->
+                <div class="exp-card gs-reveal">
+                    <div class="exp-card-header">
+                        <div class="exp-logo"><img src="images/accenture_logo.png" alt="Accenture" class="company-logo"></div>
+                        <div class="exp-title-block">
+                            <h3>Data Analyst &amp; Application Support</h3>
+                            <h4>Accenture Solutions Pvt. Ltd.</h4>
+                            <span class="exp-date"><i class="far fa-calendar-alt"></i> September 2022 &mdash; August 2024</span>
+                            <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Bengaluru, India (Global Retail Client)</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <ul class="exp-bullets">
+                            <li><i class="fas fa-chart-bar"></i> Designed and delivered 15+ Power BI dashboards for a major retail client, enabling real-time KPI tracking across sales, inventory, and analytics &mdash; <strong>reducing reporting turnaround by 40%</strong></li>
+                            <li><i class="fas fa-cogs"></i> Provided L2/L3 support for Dynamics 365 F&amp;O, managing POS configurations and retail channel setup across <strong>200+ stores</strong></li>
+                            <li><i class="fas fa-database"></i> Performed SQL-based data analysis to identify pricing discrepancies and stock anomalies, contributing to a <strong>&pound;120K annual cost reduction</strong></li>
+                            <li><i class="fas fa-users"></i> Collaborated with cross-functional stakeholders and UK-based programme managers, <strong>improving SLA compliance to 98.5%</strong></li>
+                            <li><i class="fas fa-file-alt"></i> Created automated data quality reports and incident resolution documentation, <strong>cutting average resolution time by 35%</strong></li>
+                        </ul>
+                        <div class="exp-metrics">
+                            <div class="exp-metric"><strong>40%</strong><span>Faster Reporting</span></div>
+                            <div class="exp-metric"><strong>200+</strong><span>Stores Supported</span></div>
+                            <div class="exp-metric"><strong>98.5%</strong><span>SLA Compliance</span></div>
+                            <div class="exp-metric"><strong>15+</strong><span>BI Dashboards</span></div>
+                        </div>
+                    </div>
+                    <div class="exp-accenture-photo">
+                        <div class="accenture-photo-frame">
+                            <img src="images/accenture_office.jpg" alt="Srivalli at Accenture Next Gen Engineering" class="accenture-img">
+                        </div>
+                    </div>
+                    <div class="exp-doc-links">
+                        <a href="New folder/13559349_Relieving Letter(Automatic).pdf" target="_blank" class="exp-doc-btn"><i class="fas fa-file-pdf"></i> Relieving Letter</a>
+                    </div>
+                </div>
+
+                <!-- Happy City Hub / Institute of Quality Life -->
+                <div class="exp-card gs-reveal">
+                    <div class="exp-card-header">
+                        <div class="exp-logo"><img src="images/iql_logo.png" alt="Institute for Quality of Life" class="company-logo"></div>
+                        <div class="exp-title-block">
+                            <h3>Urban Data Researcher</h3>
+                            <h4>Happy City Hub &mdash; Institut pour la Qualit&eacute; de Vie</h4>
+                            <span class="exp-date"><i class="far fa-calendar-alt"></i> November 2025 &mdash; March 2026</span>
+                            <span class="exp-location"><i class="fas fa-map-marker-alt"></i> London, United Kingdom</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <ul class="exp-bullets">
+                            <li><i class="fas fa-search"></i> Conducted primary and secondary research for the 2026 Happy City Index, covering <strong>3,400+ cities globally</strong></li>
+                            <li><i class="fas fa-chart-area"></i> Collected, validated, and structured multi-dimensional urban datasets across governance, public health, environment, mobility, and economic indicators</li>
+                            <li><i class="fas fa-check-double"></i> Led data quality assurance processes ensuring <strong>95%+ validation accuracy</strong>, underpinning the credibility of Index findings</li>
+                            <li><i class="fas fa-landmark"></i> Research contributions formally recognised at the <strong>UK Parliament</strong>, demonstrating the civic and policy impact of the analytical work</li>
+                            <li><i class="fas fa-globe-europe"></i> Operated within an international research framework across multiple time zones, showcasing cross-cultural collaboration skills</li>
+                        </ul>
+                        <div class="exp-metrics">
+                            <div class="exp-metric"><strong>3,400+</strong><span>Cities Assessed</span></div>
+                            <div class="exp-metric"><strong>95%+</strong><span>Data Accuracy</span></div>
+                            <div class="exp-metric"><strong>UK</strong><span>Parliament Award</span></div>
+                            <div class="exp-metric"><strong>8+</strong><span>Research Themes</span></div>
+                        </div>
+                    </div>
+                    <div class="exp-parliament-highlight">
+                        <div class="parliament-photo">
+                            <img src="images/parliament_award.jpg" alt="Srivalli receiving recognition at the UK Parliament" class="parliament-img">
+                        </div>
+                        <div class="parliament-caption">
+                            <span class="parliament-badge"><i class="fas fa-award"></i> UK Parliament Recognition</span>
+                            <p>Recognised at the Houses of Parliament for outstanding contributions to the Happy City Index urban research programme.</p>
+                        </div>
+                    </div>
+                    <div class="exp-doc-links">
+                        <a href="New folder/Srivalli K C  2.pdf" target="_blank" class="exp-doc-btn"><i class="fas fa-file-pdf"></i> Reference Letter</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -246,58 +406,58 @@
         </div>
     </section>
 
-    <!-- CERTIFICATIONS SECTION (Dark) -->
-    <section id="certs" class="sec-padding sec-dark bg-main">
+    <!-- CERTIFICATIONS SECTION (Light) -->
+    <section id="certs" class="sec-padding sec-light bg-main">
         <div class="container">
-            <h2 class="section-title text-center mb-5 gs-reveal">Certifications & <span class="hl">Credentials</span></h2>
+            <h2 class="section-title text-center mb-5 gs-reveal">Certifications &amp; <span class="hl">Credentials</span></h2>
             
-            <div class="certs-grid gs-reveal up">
+            <div class="certs-grid-even gs-reveal up">
                 <div class="cert-card magnetic-hover">
                     <a href="NHS_Award.jpeg" target="_blank">
                         <img src="NHS_Award.jpeg" alt="NHS Digdata Step Up Career Challenge" class="cert-img">
                     </a>
                     <h3>NHS Step Up Data Challenge</h3>
-                    <p>Digdata Programme, recognizing exceptional data analytics problem solving</p>
+                    <p>Digdata Programme &mdash; exceptional data analytics problem solving</p>
                     <span class="cert-date">March 2025</span>
                 </div>
                 <div class="cert-card magnetic-hover">
                     <a href="images/azure_ai900.png" target="_blank">
-                        <img src="images/azure_ai900.png" alt="Microsoft Azure AI Fundamentals Certificate" class="cert-img">
+                        <img src="images/azure_ai900.png" alt="Microsoft Azure AI Fundamentals" class="cert-img">
                     </a>
                     <h3>Microsoft Azure AI-900</h3>
-                    <p>Microsoft Certified, covering foundational machine learning and AI workloads</p>
+                    <p>Microsoft Certified &mdash; ML and AI workloads fundamentals</p>
                     <span class="cert-date">May 2025</span>
                 </div>
                 <div class="cert-card magnetic-hover">
                     <a href="images/matlab_cert.png" target="_blank">
-                        <img src="images/matlab_cert.png" alt="MathWorks MATLAB Onramp Certificate" class="cert-img">
+                        <img src="images/matlab_cert.png" alt="MathWorks MATLAB Onramp" class="cert-img">
                     </a>
                     <h3>MATLAB Onramp</h3>
-                    <p>MathWorks Training Services, comprehensive foundation in data analysis</p>
+                    <p>MathWorks Training &mdash; data analysis foundations</p>
                     <span class="cert-date">February 2025</span>
                 </div>
                 <div class="cert-card magnetic-hover">
                     <a href="images/cert_data.png" target="_blank">
-                        <img src="images/cert_data.png" alt="Microsoft Certified: Dynamics 365 Fundamentals (ERP)" class="cert-img">
+                        <img src="images/cert_data.png" alt="Dynamics 365 Fundamentals ERP" class="cert-img">
                     </a>
-                    <h3>Dynamics 365 Fundamentals (ERP)</h3>
-                    <p>Microsoft Certified, demonstrating mastery of ERP core capabilities and logic</p>
+                    <h3>Dynamics 365 (ERP)</h3>
+                    <p>Microsoft Certified &mdash; ERP core capabilities</p>
                     <span class="cert-date">November 2022</span>
                 </div>
                 <div class="cert-card magnetic-hover">
                     <a href="images/cert_crm.png" target="_blank">
-                        <img src="images/cert_crm.png" alt="Microsoft Certified: Dynamics 365 Fundamentals (CRM)" class="cert-img">
+                        <img src="images/cert_crm.png" alt="Dynamics 365 Fundamentals CRM" class="cert-img">
                     </a>
-                    <h3>Dynamics 365 Fundamentals (CRM)</h3>
-                    <p>Microsoft Certified, validating knowledge of customer engagement applications</p>
+                    <h3>Dynamics 365 (CRM)</h3>
+                    <p>Microsoft Certified &mdash; customer engagement</p>
                     <span class="cert-date">November 2022</span>
                 </div>
                 <div class="cert-card magnetic-hover">
                     <a href="images/cert_power.png" target="_blank">
-                        <img src="images/cert_power.png" alt="Microsoft Certified: Power Platform Fundamentals" class="cert-img">
+                        <img src="images/cert_power.png" alt="Power Platform Fundamentals" class="cert-img">
                     </a>
-                    <h3>Power Platform Fundamentals</h3>
-                    <p>Microsoft Certified, covering capabilities of Power BI, Apps, and Automate</p>
+                    <h3>Power Platform</h3>
+                    <p>Microsoft Certified &mdash; Power BI, Apps &amp; Automate</p>
                     <span class="cert-date">November 2022</span>
                 </div>
             </div>

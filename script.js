@@ -180,4 +180,29 @@ window.addEventListener('load', () => {
         if(window.scrollY > 50) nav.classList.add('scrolled');
         else nav.classList.remove('scrolled');
     });
+
+    // ═════ DASHBOARD TAB SWITCHING ═════
+    const dashTabs = document.querySelectorAll('.dash-tab');
+    const dashPanels = document.querySelectorAll('.dashboard-panel');
+    
+    dashTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.dataset.dashboard;
+            
+            dashTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            dashPanels.forEach(panel => {
+                panel.classList.remove('active');
+                panel.style.animation = 'none';
+            });
+            
+            const targetPanel = document.getElementById(`dashboard-${target}`);
+            if (targetPanel) {
+                void targetPanel.offsetWidth;
+                targetPanel.style.animation = '';
+                targetPanel.classList.add('active');
+            }
+        });
+    });
 });

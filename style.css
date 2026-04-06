@@ -689,16 +689,16 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-prim
 .exp-sharp-item:not(:last-child)::after {
     content: '';
     position: absolute;
-    top: 50px;
+    top: 74px;
     bottom: -3rem;
-    left: 19px;
+    left: 31px;
     width: 1px;
     background: rgba(226, 232, 240, 0.25);
 }
 
 .exp-sharp-marker {
-    width: 40px;
-    height: 40px;
+    width: 64px;
+    height: 64px;
     flex-shrink: 0;
     background: #fff;
     border-radius: 50%;
@@ -715,7 +715,7 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-prim
 }
 .exp-sharp-marker.border-purple { border-color: var(--accent-purple); }
 .exp-sharp-marker.border-gold { border-color: var(--accent); }
-.exp-sharp-logo { width: 24px; height: 24px; object-fit: contain; }
+.exp-sharp-logo { width: 36px; height: 36px; object-fit: contain; }
 
 .exp-sharp-content { flex: 1; }
 .job-title { font-size: 1.3rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem; font-family: var(--font-sans); }
@@ -754,14 +754,14 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-prim
     color: var(--text-primary);
 }
 .exp-sharp-bullets li::before {
-    content: '\2022';
+    content: '\f058';
     position: absolute;
     left: 0;
     color: #B8955A;
-    font-family: var(--font-sans);
-    font-size: 1.5rem;
-    top: -6px;
-    font-weight: bold;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1rem;
+    top: 4px;
 }
 
 .exp-sharp-visual { position: relative; display: flex; flex-direction: column; gap: 2rem; height: 100%; }

@@ -2,19 +2,19 @@
 
 :root {
     /* Global Accents — Refined Gold */
-    --accent: #c5a55a;         /* Refined gold */
+    --accent: #B8955A;         /* Refined gold */
     --accent-hover: #d4b76a;   /* Brighter gold */
-    --accent-dim: rgba(197, 165, 90, 0.12);
-    --accent-purple: #a100ff;  /* Accenture purple */
+    --accent-dim: rgba(184, 149, 90, 0.12);
+    --accent-purple: #a100ff;  
     
-    /* Dark Theme — Midnight Navy */
-    --dk-bg-main: #050A18;
-    --dk-bg-alt: #0A192F;
-    --dk-bg-surface: #112240;
-    --dk-text-primary: #e6f1ff;
-    --dk-text-muted: #8892b0;
-    --dk-border: rgba(255, 255, 255, 0.08);
-    --dk-card-border: rgba(255, 255, 255, 0.06);
+    /* Dark Theme — Soft Navy & Silver Grey */
+    --dk-bg-main: #101A33;
+    --dk-bg-alt: #162447;
+    --dk-bg-surface: #1B2B52;
+    --dk-text-primary: #E2E8F0;
+    --dk-text-muted: #CBD5E0;
+    --dk-border: rgba(226, 232, 240, 0.1);
+    --dk-card-border: rgba(226, 232, 240, 0.08);
 
     /* Light Theme — Clean Slate */
     --lt-bg-main: #f0f2f5;
@@ -718,23 +718,25 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-prim
 .exp-sharp-logo { width: 24px; height: 24px; object-fit: contain; }
 
 .exp-sharp-content { flex: 1; }
-.job-title { font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 0.25rem; font-family: var(--font-sans); }
+.job-title { font-size: 1.3rem; font-weight: 700; color: #B8955A; margin-bottom: 0.25rem; font-family: var(--font-sans); }
 .company-date { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; }
-.company { font-weight: 600; font-size: 1.05rem; }
+.company { font-weight: 600; font-size: 1.05rem; color: var(--text-primary); }
 .color-purple { color: var(--accent-purple); }
 .color-gold { color: var(--accent); }
-.date { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+.date { font-family: var(--font-mono); font-size: 0.8rem; color: #B8955A; text-transform: uppercase; letter-spacing: 1px; }
 
 .tech-stack-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
 .ghost-tags span {
     padding: 0.3rem 0.8rem;
-    background: transparent !important;
+    background: #FFFDF5 !important;
     border: 1px solid #B8955A !important;
     color: #B8955A !important;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border-radius: 4px;
 }
 
 .exp-sharp-bullets {
@@ -749,7 +751,7 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-prim
     padding-left: 1.25rem;
     font-size: 0.95rem;
     line-height: 1.8;
-    color: var(--text-muted);
+    color: var(--text-primary);
 }
 .exp-sharp-bullets li::before {
     content: '\2022';

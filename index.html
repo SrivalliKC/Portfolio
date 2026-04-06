@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
     <!-- GSAP for advanced animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -225,7 +225,71 @@
     </section>
 
     <!-- EXPERIENCE SECTION (Dark) -->
+    <section id="experience" class="sec-padding sec-dark bg-main relative" style="overflow: hidden;"> 
+        <!-- Premium Radial Formula from About Section -->
+        <div class="hero-bg-gradient" style="opacity: 0.15; pointer-events: none;"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="exp-formula-grid gs-reveal">
+                
+                <!-- Left Column: Content -->
+                <div class="exp-column-text">
+                    <div class="section-header" style="margin-bottom: 2rem;">
+                        <h2 class="section-title">Professional <span class="hl">Experience</span></h2>
+                        <p class="section-subtitle">Driving enterprise value through advanced data analytics and automation across globally recognized organizations.</p>
+                    </div>
+
+                    <!-- Accenture Condensed -->
+                    <div class="exp-card-condensed">
+                        <h3 class="job-title">Data Analyst</h3>
+                        <div class="company-date">
+                            <span class="company color-gold">Accenture</span>
+                            <span class="date">Sep 2022 &mdash; Aug 2024</span>
+                        </div>
+                        <ul class="exp-sharp-bullets">
+                            <li>Analysed <b>150K+</b> data records with SQL and Excel to improve <b>decision-making speed 20%+</b>.</li>
+                            <li>Automated <b>Power BI</b> and Tableau dashboards to track KPIs.</li>
+                            <li>Built data pipelines with Python and Power Query for <b>Dynamics 365</b> reporting.</li>
+                        </ul>
+                        <div class="tech-stack-pills ghost-tags" style="margin-top: 1rem;">
+                            <span><i class="fas fa-chart-bar"></i> Power BI</span>
+                            <span><i class="fas fa-database"></i> SQL</span>
+                            <span><i class="fab fa-python"></i> Python</span>
+                            <span><i class="fas fa-file-excel"></i> Excel</span>
+                        </div>
+                    </div>
+
+                    <!-- IQL Condensed -->
+                    <div class="exp-card-condensed">
+                        <h3 class="job-title">Data Research Analyst</h3>
+                        <div class="company-date">
+                            <span class="company color-gold">Institute for Quality of Life</span>
+                            <span class="date">Nov 2025 &mdash; Mar 2026</span>
+                        </div>
+                        <ul class="exp-sharp-bullets">
+                            <li>Authored empirical research contributions formally recognized at the <b>UK Parliament</b>, influencing civic policy directives.</li>
+                            <li>Analyzed multi-dimensional datasets covering <b>3,400+</b> cities globally to rank the <b>2026 Happy City Index</b>.</li>
+                            <li>Engineered robust data validation processes securing <b>95%+</b> data integrity for public-facing UK urban metrics.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sharp-doc-links" style="margin-top: 2rem;">
+                        <a href="New folder/13559349_Relieving Letter(Automatic).pdf" target="_blank" class="btn-outline-sharp" style="width: fit-content; padding: 0.8rem 1.5rem;"><i class="fas fa-file-pdf"></i> View Experience Letter</a>
+                    </div>
                 </div>
+
+                <!-- Right Column: Visual Brand Box -->
+                <div class="exp-column-visual">
+                    <div class="exp-visual-box">
+                        <div class="exp-visual-logos">
+                            <img src="images/accenture_logo.png" alt="Accenture Logo" class="exp-brand-logo">
+                            <img src="images/iql_logo.png" alt="IQL Logo" class="exp-brand-logo">
+                        </div>
+                        <h4 style="margin-top: 2rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); letter-spacing: 2px;">BRAND ECOSYSTEM</h4>
+                        <p style="font-size: 0.85rem; color: var(--dk-text-muted); margin-top: 0.5rem;">Verified contributions to industry-leading organizations.</p>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>

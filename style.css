@@ -162,6 +162,7 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-prim
     background-image: 
         radial-gradient(circle at 20% 50%, rgba(197, 165, 90, 0.08) 0%, transparent 60%),
         radial-gradient(circle at 80% 30%, rgba(197, 165, 90, 0.12) 0%, transparent 50%);
+    background-color: #101A33 !important;
 }
 /* Faint Data Architect Grid */
 .hero::before {
@@ -902,6 +903,16 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-prim
     .exp-parliament-highlight { grid-template-columns: 1fr; }
     .certs-grid-even { grid-template-columns: repeat(2, 1fr); }
     .about-highlights { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .exp-sharp-marker { width: 48px; height: 48px; }
+    .exp-sharp-logo { width: 24px; height: 24px; }
+    .exp-sharp-item:not(:last-child)::after { left: 23px; top: 58px; }
+    .exp-sharp-content { max-width: 100%; }
+    .hero-photo-img { width: 280px; height: 350px; }
+    .tech-stack-pills span { padding: 0.3rem 0.7rem; font-size: 0.7rem; }
 }
 
 @media (max-width: 600px) {

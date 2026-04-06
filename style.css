@@ -7,10 +7,10 @@
     --accent-dim: rgba(184, 149, 90, 0.12);
     --accent-purple: #a100ff;  
     
-    /* Dark Theme — Midnight Navy & Silver Grey */
-    --dk-bg-main: #050A18;
-    --dk-bg-alt: #0A192F;
-    --dk-bg-surface: #112240;
+    /* Dark Theme — Soft Navy & Silver Grey */
+    --dk-bg-main: #101A33;
+    --dk-bg-alt: #162447;
+    --dk-bg-surface: #1B2B52;
     --dk-text-primary: #E2E8F0;
     --dk-text-muted: #A0AEC0;
     --dk-border: rgba(226, 232, 240, 0.08);

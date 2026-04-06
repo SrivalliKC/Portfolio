@@ -679,29 +679,6 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-prim
     position: absolute;
     top: 74px;
     bottom: -3rem;
-    left: 31px;
-    width: 1px;
-    background: rgba(226, 232, 240, 0.25);
-}
-
-.exp-sharp-marker {
-    width: 64px;
-    height: 64px;
-    flex-shrink: 0;
-    background: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--border-color);
-    z-index: 2;
-    overflow: hidden;
-}
-.exp-sharp-marker.shadow-glow {
-    border: 2px solid #FFFFFF !important;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
-}
-.exp-sharp-marker.border-purple { border-color: var(--accent-purple); }
 .exp-sharp-marker.border-gold { border-color: var(--accent); }
 .exp-sharp-logo { width: 36px; height: 36px; object-fit: contain; }
 

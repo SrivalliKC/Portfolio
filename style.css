@@ -7,14 +7,14 @@
     --accent-dim: rgba(184, 149, 90, 0.12);
     --accent-purple: #a100ff;  
     
-    /* Dark Theme — Soft Navy & Silver Grey */
-    --dk-bg-main: #101A33;
-    --dk-bg-alt: #162447;
-    --dk-bg-surface: #1B2B52;
+    /* Dark Theme — Midnight Navy & Silver Grey */
+    --dk-bg-main: #050A18;
+    --dk-bg-alt: #0A192F;
+    --dk-bg-surface: #112240;
     --dk-text-primary: #E2E8F0;
-    --dk-text-muted: #CBD5E0;
-    --dk-border: rgba(226, 232, 240, 0.1);
-    --dk-card-border: rgba(226, 232, 240, 0.08);
+    --dk-text-muted: #A0AEC0;
+    --dk-border: rgba(226, 232, 240, 0.08);
+    --dk-card-border: rgba(226, 232, 240, 0.06);
 
     /* Light Theme — Clean Slate */
     --lt-bg-main: #f0f2f5;
@@ -70,6 +70,7 @@ img { max-width: 100%; display: block; border-radius: 4px; }
 
 /* ═════ TYPOGRAPHY & UTILS ═════ */
 .hl { color: var(--accent); }
+.hl-gold { color: #B8955A !important; font-weight: 700; }
 .mono-text { font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
 .relative { position: relative; z-index: 1; }
 .bg-main { background-color: var(--bg-main) !important; }
@@ -717,8 +718,8 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-prim
 .exp-sharp-marker.border-gold { border-color: var(--accent); }
 .exp-sharp-logo { width: 36px; height: 36px; object-fit: contain; }
 
-.exp-sharp-content { flex: 1; }
-.job-title { font-size: 1.3rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem; font-family: var(--font-sans); }
+.exp-sharp-content { flex: 1; max-width: 750px; }
+.job-title { font-size: 1.3rem; font-weight: 700; color: #E2E8F0; margin-bottom: 0.25rem; font-family: var(--font-sans); }
 .company-date { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; }
 .company { font-weight: 600; font-size: 1.05rem; color: var(--text-primary); }
 .color-purple { color: var(--accent-purple); }
@@ -727,16 +728,19 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-prim
 
 .tech-stack-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
 .ghost-tags span {
-    padding: 0.3rem 0.8rem;
-    background: transparent !important;
+    padding: 0.4rem 0.9rem;
+    background: #FFFDF5 !important;
     border: 1px solid #B8955A !important;
-    color: #B8955A !important;
+    color: #8C6F3B !important;
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 4px;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .exp-sharp-bullets {
@@ -754,14 +758,14 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-prim
     color: var(--text-primary);
 }
 .exp-sharp-bullets li::before {
-    content: '\f058';
+    content: '\2022';
     position: absolute;
     left: 0;
     color: #B8955A;
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    font-size: 1rem;
-    top: 4px;
+    font-family: var(--font-sans);
+    font-size: 1.4rem;
+    top: -4px;
+    font-weight: bold;
 }
 
 .exp-sharp-visual { position: relative; display: flex; flex-direction: column; gap: 2rem; height: 100%; }
